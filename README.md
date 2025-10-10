@@ -97,6 +97,7 @@ Sử dụng GET để có thể thực hiện được cái dashboard
 5.	Commit to onwer repository named: StudentID-Fullname-EProject (example: 2231213-NguyenVanAn-EProject). 
 <br>
 •	Don’t commit: .env, node_modules and .DS_Store
+<br>
 
 ![result](/public/5_gitignore.png)
 
