@@ -19,41 +19,49 @@
 ![cau2](/public/2_product.png)
  
 -	Thêm dữ liệu cho file .env:
-
+<br>
 + auth
-•	MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
-•	JWT_SECRET=
+<br>
+MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
+<br>
+JWT_SECRET=
+<br>
 JWT_SECRET có được khi Chạy câu lệnh: 
+<br>
  node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"  để lấy được chuỗi ngẫu nhiên (random string) trong Node.js
-
+<br>
 + order: 
-•	MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
-•	JWT_SECRET=
+<br>
+MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
+<br>
+JWT_SECRET=
 /// Lấy từ auth xuống
-
-•	MONGODB_PRODUCT_URI=mongodb://127.0.0.1:27017/productdb
-
-•	MONGODB_ORDER_URI=mongodb://127.0.0.1:27017/orderdb
-
+<br>
+MONGODB_PRODUCT_URI=mongodb://127.0.0.1:27017/productdb
+<br>
+MONGODB_ORDER_URI=mongodb://127.0.0.1:27017/orderdb
+<br>
 + product:
-•	MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
-•	JWT_SECRET=
+<br>
+MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
+<br>
+JWT_SECRET=
 /// Lấy từ auth xuống
-
-•	MONGODB_PRODUCT_URI=mongodb://127.0.0.1:27017/productdb
+<br>
+MONGODB_PRODUCT_URI=mongodb://127.0.0.1:27017/productdb
 
 ### 3.	Setup all microservices
--	Auth
+## Auth
 npm start
 ![kqua1](/public/3_auth.png)
 
--	Product
+## Product
 npm start
 ![kqua2](/public/3_product.png)
 ![kqua2mongo](/public/productdb.png)
 
  
--	Order
+## Order
 npm start
 
 	
@@ -87,5 +95,11 @@ Sử dụng GET để có thể thực hiện được cái dashboard
 ### order
 
 5.	Commit to onwer repository named: StudentID-Fullname-EProject (example: 2231213-NguyenVanAn-EProject). 
+<br>
 •	Don’t commit: .env, node_modules and .DS_Store
+
+![result](/public/5_gitignore.png)
+
+
 •	Create README to describe project
+<br>
