@@ -43,7 +43,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/product_service:latest
           platforms: linux/amd64,linux/arm64
-
+          
       # 6. Build & Push Order Service
       - name: Build & Push Order Service
         uses: docker/build-push-action@v6
