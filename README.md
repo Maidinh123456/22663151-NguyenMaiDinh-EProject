@@ -1,106 +1,85 @@
-
 ### 1.	Download source code
-![cau1](/public/1.png)
-
 ### 2.	Run npm install
-## EProject -Phase-1
-![cau2](/public/2.png)
+### 3.	Thêm dữ liệu
+-	Thêm dữ liệu cho file .env của api-gateway, auth, product, order
+<br>
+-   Thêm dữ liệu cho Dockerfile của api-gateway, auth, product, order
+<br>
+-   Thêm dữ liệu cho file docker-compose.yml
+<br>
 
-- cd api-gateway->npm install
-![cau2](/public/apigateway.png)
- 
-- cd..-> cd auth->npm install
-![cau2](/public/2_auth.png)
- 
-- cd..->cd order->npm install
-![cau2](/public/2_order.png)
- 
-- cd..->cd product->npm install
-![cau2](/public/2_product.png)
- 
--	Thêm dữ liệu cho file .env:
-<br>
-+ auth
-<br>
-MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
-<br>
-JWT_SECRET=
-<br>
-JWT_SECRET có được khi Chạy câu lệnh: 
-<br>
- node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"  để lấy được chuỗi ngẫu nhiên (random string) trong Node.js
-<br>
-+ order: 
-<br>
-MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
-<br>
-JWT_SECRET=
-/// Lấy từ auth xuống
-<br>
-MONGODB_PRODUCT_URI=mongodb://127.0.0.1:27017/productdb
-<br>
-MONGODB_ORDER_URI=mongodb://127.0.0.1:27017/orderdb
-<br>
-+ product:
-<br>
-MONGODB_AUTH_URI=mongodb://127.0.0.1:27017/authdb
-<br>
-JWT_SECRET=
-/// Lấy từ auth xuống
-<br>
-MONGODB_PRODUCT_URI=mongodb://127.0.0.1:27017/productdb
+### 4. Build docker
+![Build docker](/public/build_docker.png)
+![Kết quả](/public/kq_build_docker.png)
 
-### 3.	Setup all microservices
-## Auth
-npm start
-![kqua1](/public/3_auth.png)
-
-## Product
-npm start
-![kqua2](/public/3_product.png)
-![kqua2mongo](/public/productdb.png)
-
- 
-## Order
-npm start
-
-	
-
-### 4.	Test all business logic with POSTMAN
+### 5.	Test all business logic with POSTMAN
 ### Auth:
 - register
-![register](/public/register_auth.png)
-![registermongo](/public/register_mongo.png)
- 
+![register](/public/register.png)
+
 - Login
-![login](/public/login_auth.png)
+![login](/public/login.png)
 
-
+<br>
 Chọn Headers->key:x-auth-token->value là giá trị của token có được từ login
+<br>
 Sử dụng GET để có thể thực hiện được cái dashboard
+<br>
+
 - dashboard
 ![dashboard](/public/dashboard.png)
+
 ### product:
-- GET
-![getsapham](/public/getproduct.png)
 
 - POST
-![postsapham](/public/postproduct.png)
-
-![postmongoo](/public/post_mongo.png)
+![post_products](/public/postproducts.png)
  
-- KIỂM TRA LẠI
-![kiemtra](/public/kiemtralai.png)
+- GET
+![get_products](/public/getproducts.png)
  
-### order
+-GET PRODUCT BY ID
+![get_productsid](/public/getidproducts.png)
 
-5.	Commit to onwer repository named: StudentID-Fullname-EProject (example: 2231213-NguyenVanAn-EProject). 
+- BUY
+![buy_product](/public/buy.png)
+
+
+### 🔍 Kiểm tra dữ liệu trong MongoDB (Docker) sau khi thực hiện trên POSTMAN
+Bạn có thể kiểm tra dữ liệu trong MongoDB container bằng lệnh:
 <br>
-•	Don’t commit: .env, node_modules and .DS_Store
+docker exec -it mongodb mongosh
+<br>
+show dbs
 <br>
 
-![result](/public/5_gitignore.png)
-
-
-•	Create README to describe project
+- auth
+use auth_db
 <br>
+show collections
+<br>
+db.users.find().pretty()
+<br>
+
+![ketqua_auth](/public/dl_auth.png)
+
+- product
+use product_db
+<br>
+show collections
+<br>
+db.products.find().pretty()
+<br>
+
+![ketqua_product](/public/dl_product.png)
+
+- order
+use order_db
+<br>
+show collections
+<br>
+db.orders.find().pretty()
+<br>
+
+![ketqua_order](/public/dl_order.png)
+
+
