@@ -2,9 +2,9 @@
 ### 2.	Run npm install
 ### 3.	Thêm dữ liệu
 -	Thêm dữ liệu cho file .env của api-gateway, auth, product, order
-<br>
+
 -   Thêm dữ liệu cho Dockerfile của api-gateway, auth, product, order
-<br>
+
 -   Thêm dữ liệu cho file docker-compose.yml
 <br>
 
@@ -20,11 +20,10 @@
 - Login
 ![login](/public/login.png)
 
-<br>
-Chọn Headers->key:x-auth-token->value là giá trị của token có được từ login
-<br>
-Sử dụng GET để có thể thực hiện được cái dashboard
-<br>
+
+- Chọn Headers->key:x-auth-token->value là giá trị của token có được từ login
+
+- Sử dụng GET để có thể thực hiện được cái dashboard
 
 - dashboard
 ![dashboard](/public/dashboard.png)
@@ -46,6 +45,7 @@ Sử dụng GET để có thể thực hiện được cái dashboard
 
 ### 🔍 Kiểm tra dữ liệu trong MongoDB (Docker) sau khi thực hiện trên POSTMAN
 Bạn có thể kiểm tra dữ liệu trong MongoDB container bằng lệnh:
+
 <br>
 docker exec -it mongodb mongosh
 <br>
