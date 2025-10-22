@@ -22,7 +22,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.MAIDINH1234567 }}
-          password: ${{ secrets.SECRETS }}
+          password: ${{ secrets.VALUE }}
 
       # 4. Build & Push Auth Service
       - name: Build & Push Auth Service
