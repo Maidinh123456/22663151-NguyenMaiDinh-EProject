@@ -53,6 +53,7 @@ show dbs
 <br>
 
 - auth
+<br>
 use auth_db
 <br>
 show collections
@@ -63,6 +64,7 @@ db.users.find().pretty()
 ![ketqua_auth](/public/dl_auth.png)
 
 - product
+<br>
 use product_db
 <br>
 show collections
@@ -73,6 +75,7 @@ db.products.find().pretty()
 ![ketqua_product](/public/dl_product.png)
 
 - order
+<br>
 use order_db
 <br>
 show collections
