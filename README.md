@@ -98,11 +98,14 @@ db.orders.find().pretty()
 - Tạo file docker-cicd.yml
 - Điền thông tin cho file docker-cicd.yml
 - Push workflow lên GitHub để chạy CI/CD
-/***
+<br>
 git add .github/workflows/docker-cicd.yml
+<br>
 git commit -m "update3"
+<br>
 git push origin main
-***/
+<br>
+
 ### Thao tác với github Action: Thực hiện CI/CD với dự án 
 ![ketqua_order](/public/github_actions.png)
 ### CI/CD liên kết với Docker 
