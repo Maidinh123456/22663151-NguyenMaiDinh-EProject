@@ -101,12 +101,12 @@ db.orders.find().pretty()
 <br>
 git add .github/workflows/docker-cicd.yml
 <br>
-git commit -m "update3"
+git commit -m "update5"
 <br>
 git push origin main
 <br>
 
 ### Thao tác với github Action: Thực hiện CI/CD với dự án 
-![ketqua_order](/public/github_actions.png)
+![ketqua_order](/public/githubactions.png)
 ### CI/CD liên kết với Docker 
 ![ketqua_order](/public/cicd_docker.png)
